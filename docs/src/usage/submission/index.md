@@ -35,7 +35,7 @@ Examples of the platform level settings are:
 - `command`
   A command used to start the submitted sample. If none is specified, Cuckoo determines one automatically. An example of when to use this is when you want to run a specific function from a DLL.
 - `route`
-  A network route. Drop, A VPN, or 'dirty line'/internet routing. See [network routing](../../installation/routing.md#using-cuckoo-rooter) for more information.
+  A network route. Drop, A VPN, or 'dirty line'/internet routing. See [network routing](All%20routing%20rules.md#using-cuckoo-rooter) for more information.
 - `browser`
   The browser to open a URL in. Browsers are discovered by search for machines with a `browser_browsername` tag.
 
