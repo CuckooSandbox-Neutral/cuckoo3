@@ -53,7 +53,7 @@ Data type: **form**
          The `%PAYLOAD%` placeholder can be used where the filename should be on start. It is automatically replaced.
          Example to run a specific function from a submitted dll: `["rundll32.exe", "%PAYLOAD%,funcname"]`
 
-      - `route` (Dictionary) The type of [network routing](../../installation/routing.md#automatic-per-task-routing-by-cuckoo-rooter) to use.
+      - `route` (Dictionary) The type of [network routing](All%20routing%20rules.md#automatic-per-task-routing-by-cuckoo-rooter) to use.
 
          The route dictionary must contain `type` (string) key containing the routing type. It optionally have an `options` (dictionary) key that contains options such as a chosen country for a VPN.
 
@@ -112,7 +112,7 @@ Data type: **form**
          
          A task will be created for each platform in the platforms list.
 
-      - `route` (Dictionary) The type of [network routing](../../installation/routing.md#automatic-per-task-routing-by-cuckoo-rooter) to use.
+      - `route` (Dictionary) The type of [network routing](All%20routing%20rules.md#automatic-per-task-routing-by-cuckoo-rooter) to use.
 
          The route dictionary must contain `type` (string) key containing the routing type. It optionally have an `options` (dictionary) key that contains options such as a chosen country for a VPN.
 
@@ -174,7 +174,7 @@ Type: **JSON**
 #### /submit/browsers
 
 Get a list of all supported browsers. This list is populated by finding machines with
-specific machine tags. See [machinery machine config fields](../../installation/vmcreation.md#machinery-config-machines-fields) for more information.
+specific machine tags. See [machinery machine config fields](Create%20virtual%20machine.md#machinery-config-machines-fields) for more information.
 
 Method: **GET**
 
@@ -200,7 +200,7 @@ Type: **JSON**
 
 #### /submit/routes
 
-Get a list of all supported routes. This will only be populated if [Cuckoo rooter](../../installation/routing.md#cuckoo-rooter) is used.
+Get a list of all supported routes. This will only be populated if [Cuckoo rooter](All%20routing%20rules.md#cuckoo-rooter) is used.
 
 Method: **GET**
 
