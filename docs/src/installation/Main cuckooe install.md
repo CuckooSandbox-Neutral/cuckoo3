@@ -15,7 +15,7 @@ This page describes the steps required to install Cuckoo. Cuckoo can be set up i
 
 The following steps are for a normal/generic Cuckoo setup. This is the type of setup fits the most scenarios.
 
-**1. Install all [system dependencies](deps.md)**
+**1. Install all [system dependencies](System%20dependencies.md)**
 
 !!! note "Note"
     `$A` is used as the location where the delivery archive was extracted.
@@ -51,11 +51,11 @@ are uploaded to the analysis vm and perform the actual behavioral collection.
 
 **5. Choosing a machinery module and configuring machines.**
 
-6.1 Choose the virtualization/machinery software from the [machineries modules page](machineries.md) and perform the required steps listed.
+6.1 Choose the virtualization/machinery software from the [machineries modules page](Connect%20virtual%20machine.md) and perform the required steps listed.
 
-6.2 Create analysis VMs taking into account the [requirements listed here](vmcreation.md).
+6.2 Create analysis VMs taking into account the [requirements listed here](Create%20virtual%20machine.md).
 
-6.3 Add the VMs to the chosen machinery configuration as [described here](vmcreation.md#adding-machines-to-cuckoo).
+6.3 Add the VMs to the chosen machinery configuration as [described here](Create%20virtual%20machine.md#adding-machines-to-cuckoo).
 
 **6. Installing the Cuckoo signatures**.
 

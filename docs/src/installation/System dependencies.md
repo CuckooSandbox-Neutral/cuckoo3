@@ -1,7 +1,7 @@
 # System dependencies
 
 This page lists all system dependencies that must be installed. The required machinery module dependencies depend on the machinery
-module you are using. See the [machineries](machineries.md) section for more information.
+module you are using. See the [Connect virtual machine](Connect%20virtual%20machine.md) section for more information.
 
 ### Hyperscan
 
