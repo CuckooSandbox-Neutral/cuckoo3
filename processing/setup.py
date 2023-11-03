@@ -41,7 +41,7 @@ setuptools.setup(
         "httpreplay>=1.0, <1.1",
         "pefile>=2022.5.30, <2023.0.0",
         "oletools>=0.60.1, <0.61",
-        "cryptography>=38.0.4, <39.0.0",
+        "cryptography>=38.0.4, <41.0.6", #39.0.0 That give more errors. Conflict with sflock. (pip)
         "hyperscan>=0.4.0",
         "yara-python>=4.2.0, <4.3",
         "roach>=1.0, <1.1",

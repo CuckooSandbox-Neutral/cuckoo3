@@ -6,7 +6,7 @@ This page lists all currently supported virtualization/machinery modules and the
 
 ### Configuring a chosen module
 
-Cuckoo must be told what machinery modules to use. The chosen module(s) can be configured in `$CWD/conf/cuckoo.yaml` under the `machineries` list.
+Cuckoo must be told what machinery modules to use. The chosen module(s) can be configured in `$USER/.cuckoocwd/conf/cuckoo.yaml` under the `machineries` list.
 Values in this list must always be lowercase.
 
 ```yaml
@@ -23,12 +23,20 @@ machineries:
 - qemu
 ```
 
+#### Change tcpdump path binary
+```yaml
+# Settings used by Cuckoo to find the tcpdump binary to use for network capture of machine traffic.
+tcpdump:
+  enabled: True
+  path: /usr/bin/tcpdump #Path to tcpdump
+```
+
 ### Modules
 
 All supported machinery modules are listed below
 
 
-#### QEMU
+#### QEMU (TYPE 1)
 
 QEMU is currently de default machinery module. Machines for it can be created with VMCloak. 
 The minimum QEMU version is 2.11.
@@ -61,16 +69,16 @@ Cuckoo uses migration to restore machine to a running state. It does not use dis
 Cuckoo assumes QEMU disks are qcow2 and are created with the `lazy_refcounts=on,cluster_size=2M` options. Cuckoo creates a new disk with those options and
 the configured machine disk as the backing disk.
 
-###### Required system packages
-- `qemu-system-x86_64`
+###### Required system packages 
+- `qemu-system` (In Ubuntu 22.04)
 - `qemu-utils`
 
 ```bash
-sudo apt install qemu-system-x86_64 qemu-utils
+sudo apt install qemu-system qemu-utils
 ```
 
 
-#### KVM libvirt
+#### KVM libvirt (TYPE 2)
 KVM is supported by Cuckoo. Cuckoo speaks to KVM using [Libvirt](https://libvirt.org/docs.html){target=_blank}.
 
 ###### Required system packages

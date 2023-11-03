@@ -16,7 +16,7 @@ set specific Linux capabilities to the binary.
 ```bash
 sudo groupadd pcap
 sudo adduser cuckoo pcap
-sudo chgrp pcap /usr/sbin/tcpdump
+sudo chgrp pcap /usr/bin/tcpdump
 ```
 
 2. Allowing non-root users to create network captures using `setcap`.
@@ -34,7 +34,7 @@ sudo setcap cap_net_raw,cap_net_admin=eip /usr/sbin/tcpdump
 3. Only perform this step if AppArmor is enabled. It allows tcpdump to write to Cuckoo's CWD. Not performing this step when AppArmor is enabled can result in 'Permission denied' error when Cuckoo starts tcpdump for network captures.
 
 3.1 To allow tcpdump to write in Cuckoo's CWD, we should add the CWD location to the tcpdump AppArmor profile.
-Open `/etc/apparmor.d/usr.sbin.tcpdump` and add the following line with your CWD.
+Open `/etc/apparmor.d/usr.bin.tcpdump` and add the following line with your CWD.
 
 `<Your CWD location>/storage/analyses/* rw`
 

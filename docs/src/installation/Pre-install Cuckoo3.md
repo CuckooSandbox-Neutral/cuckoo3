@@ -33,16 +33,16 @@ chgrp pcap /usr/sbin/tcpdump
 
 Allow creation of pcaps for non-root users:
 ```
-setcap cap_net_raw,cap_net_admin=eip /usr/sbin/tcpdump
+setcap cap_net_raw,cap_net_admin=eip /usr/bin/tcpdump
 ```
 
 Ubuntu uses Apparmor, so we need to disable the profile for tcpdump (Alternatively, adding an exception would also do):
 ```
-ln -s /etc/apparmor.d/usr.sbin.tcpdump /etc/apparmor.d/disable/
-apparmor_parser -R /etc/apparmor.d/disable/usr.sbin.tcpdump
+ln -s /etc/apparmor.d/usr.bin.tcpdump /etc/apparmor.d/disable/
+apparmor_parser -R /etc/apparmor.d/disable/usr.bin.tcpdump
 ```
 
 Reload the apparmor profile:
 ```
-apparmor_parser -r /etc/apparmor.d/usr.sbin.tcpdump
+apparmor_parser -r /etc/apparmor.d/usr.bin.tcpdump
 ```

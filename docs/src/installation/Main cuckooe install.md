@@ -18,7 +18,7 @@ The following steps are for a normal/generic Cuckoo setup. This is the type of s
 **1. Install all [system dependencies](System%20dependencies.md)**
 
 !!! note "Note"
-    `$A` is used as the location where the delivery archive was extracted.
+    `$cuckoo_archive` is used as the location where the delivery archive was extracted.
 
 
 **2. Installing Cuckoo 3 from a delivery archive.**
@@ -47,7 +47,7 @@ Cuckoo stores all its results, configurations, and other files. The CWD will be 
 The next step is to install the stager and monitor binaries. These are components that
 are uploaded to the analysis vm and perform the actual behavioral collection.
 
-    cuckoo getmonitor $A/cuckoo/monitor.zip
+    cuckoo getmonitor $cuckoo_archive/cuckoo3/monitor.zip
 
 **5. Choosing a machinery module and configuring machines.**
 
