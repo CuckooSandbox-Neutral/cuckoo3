@@ -7,7 +7,7 @@ import sys
 
 if sys.version[0] == "2":
     sys.exit(
-        "The latest version of Cuckoo is Python >=3.6 only. Any Cuckoo version "
+        "The latest version of Cuckoo is Python >=3.8 only. Any Cuckoo version "
         "earlier than 3.0.0 supports Python 2."
     )
 
@@ -23,12 +23,12 @@ setuptools.setup(
         "Natural Language :: English",
         "License :: OSI Approved :: European Union Public Licence 1.2 (EUPL 1.2)",
         "Operating System :: POSIX :: Linux",
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
         "Topic :: Security",
     ],
-    python_requires=">=3.6",
+    python_requires=">=3.8",
     url="https://cuckoosandbox.org/",
     license="GPLv3",
     description="Cuckoo data processing helpers and modules",
@@ -39,11 +39,11 @@ setuptools.setup(
         "sflock>=1.0, <1.1",
         "protobuf>=3.20.1, <4.0.0",
         "httpreplay>=1.0, <1.1",
-        "pefile>=2022.5.30, <2023.0.0",
+        "pefile>=2022.5.30, <2024.0.0",
         "oletools>=0.60.1, <0.61",
-        "cryptography>=38.0.4, <41.0.6", #39.0.0 That give more errors. Conflict with sflock. (pip)
-        "hyperscan>=0.4.0",
-        "yara-python>=4.2.0, <4.3",
+        "cryptography>=41.0.4, <42.0.0",
+        "hyperscan>=0.2.0, <0.7",
+        "yara-python>=4.2.0, <4.4",
         "roach>=1.0, <1.1",
         "suricatactl==0.0.1.dev3",
         "dpkt>=1.9.7.2, <1.10"
