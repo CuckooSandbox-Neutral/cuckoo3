@@ -23,15 +23,26 @@ class CleanerError(Exception):
     pass
 
 
-def find_analyses(older_than_days):
+def find_analyses(older_than_days, state):
     match_before = datetime.datetime.now() - datetime.timedelta(
         days=older_than_days
     )
 
     return analyses.list_analyses(
-        state=analyses.States.FINISHED, older_than=match_before,
+        state=state, older_than=match_before,
         remote=False
     ), match_before
+
+def find_analyses_hours(older_than_hours, state):
+    match_before = datetime.datetime.now() - datetime.timedelta(
+        hours=older_than_hours
+    )
+
+    return analyses.list_analyses(
+        state=state, older_than=match_before,
+        remote=False
+    ), match_before
+
 
 class AnalysisRemoteExporter:
 
